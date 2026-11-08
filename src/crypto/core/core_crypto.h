@@ -1,7 +1,7 @@
 #ifndef CORE_CRYPTO_H
 #define CORE_CRYPTO_H
 
-#include "../../core.h"
+#include "core.h"
 
 #include <bcrypt.h>
 #include <wincrypt.h>
