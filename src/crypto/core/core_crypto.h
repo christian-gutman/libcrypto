@@ -46,6 +46,7 @@ typedef const BYTE *LPCBYTE;
     CORE_API int MD5File(const wchar_t *wFilePath, char *outputHex);
     CORE_API int SHA1File(const wchar_t *wFilePath, char *outputHex);
     CORE_API int SHA256File(const wchar_t *wFilePath, char *outputHex);
+    CORE_API int SHA384File(const wchar_t *wFilePath, char *outputHex);
     CORE_API int SHA512File(const wchar_t *wFilePath, char *outputHex);
     CORE_API int GenerateFileHashAlgorithm(const wchar_t *wFilePath, const wchar_t *wAlgorithm, char *outputHex);
 

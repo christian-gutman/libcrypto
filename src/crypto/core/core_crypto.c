@@ -316,6 +316,10 @@ int SHA256File(const wchar_t *wFilePath, char *outputHex)
 {
     return HashFileGeneric(BCRYPT_SHA256_ALGORITHM, wFilePath, outputHex);
 }
+int SHA384File(const wchar_t *wFilePath, char *outputHex)
+{
+    return HashFileGeneric(BCRYPT_SHA384_ALGORITHM, wFilePath, outputHex);
+}
 int SHA512File(const wchar_t *wFilePath, char *outputHex)
 {
     return HashFileGeneric(BCRYPT_SHA512_ALGORITHM, wFilePath, outputHex);
@@ -473,6 +477,8 @@ int GenerateFileHmacAlgorithm(const wchar_t *wFilePath, const char *pKey, size_t
         return HmacFileGeneric(BCRYPT_MD5_ALGORITHM, wFilePath, pKey, keyLen, outputHex);
     if (_wcsicmp(wAlgorithm, L"SHA1") == 0)
         return HmacFileGeneric(BCRYPT_SHA1_ALGORITHM, wFilePath, pKey, keyLen, outputHex);
+    if (_wcsicmp(wAlgorithm, L"SHA-256") == 0)
+        return HmacFileGeneric(BCRYPT_SHA256_ALGORITHM, wFilePath, pKey, keyLen, outputHex);
     if (_wcsicmp(wAlgorithm, L"SHA-384") == 0 || _wcsicmp(wAlgorithm, L"SHA384") == 0)
         return HmacFileGeneric(BCRYPT_SHA384_ALGORITHM, wFilePath, pKey, keyLen, outputHex);
     if (_wcsicmp(wAlgorithm, L"SHA-512") == 0 || _wcsicmp(wAlgorithm, L"SHA512") == 0)
