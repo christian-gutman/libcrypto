@@ -69,7 +69,7 @@ target_compile_definitions(libcrypto PRIVATE
 
 target_link_libraries(libcrypto PRIVATE crypt32 bcrypt ncrypt ${VFP_LIB})
 
-set(DIR_BIN "${CMAKE_CURRENT_SOURCE_DIR}/../../bin/${DIR_BUILD}")
+set(DIR_BIN "${CMAKE_CURRENT_SOURCE_DIR}/../../../bin/${DIR_BUILD}")
 
 set_target_properties(libcrypto PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${DIR_BIN}/$<CONFIG>"
